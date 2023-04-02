@@ -1,0 +1,99 @@
+:root{
+    --primary-background:#48bbd8;
+    --secondary-background:#ffd670;
+    --hover-color:#4ab2c0;
+    --text-color:#242424;
+    --nav-font-weight:600;
+    --transition:.5s all ease-in-out;
+    --gradient-first: #f6d365;
+    --gradient-second:#fda085;
+}
+body{
+    /* background-color: var(--primary-background);  */
+    background:url('../images/bg.jpg');
+    background-size: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+.bold{
+    font-weight: 600 !important;
+}
+#hero,#reviews{
+    height:90vh !important;
+}
+
+.top-50{
+    margin-top:50px !important;
+}
+/* For navigation bar */
+.nav-link{
+    margin-left:15px !important;
+    font-weight: var(--nav-font-weight) !important;
+    transition: var(--transition) !important;
+}
+.nav-link:hover{
+    color: var(--hover-color) !important;
+}
+
+/* for hero. */
+.custom-margin{
+    margin-top:8rem !important;
+}
+.small-text{
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin:5px;
+}
+/* hr{
+    width:50%;
+    opacity: 1 !important;
+    margin:1rem auto !important;
+} */
+.large-text{
+    font-size:30px;
+    font-weight: 900;
+}
+.btn-nav{
+    background: var(--primary-background) !important;
+    /* color:var(--text-color) !important; */
+}
+
+.btn-nav:hover {
+    background:var(--hover-color) !important;
+    color:var(--text-color) !important;
+}
+.custom-btn{
+    background: var(--primary-background) !important;
+    color:var(--text-color) !important;
+    font-weight: var(--nav-font-weight) !important;
+    margin-top:8px;
+    transition: var(--transition) !important;
+}
+.custom-btn:hover{
+    background:var(--hover-color) !important;
+}
+/* Responsive */
+
+@media screen and (min-width:100px) and (max-width:1024px) {
+    .custom-margin{
+        margin-top:4rem !important;
+    }
+    
+}
+
+/* For staff cards */
+.gradient-custom{
+    background:linear-gradient(to right bottom, var(--gradient-first),var(--gradient-second)) !important;
+}
+.rounded-50{
+    border-radius: 50px !important;
+}
+.o-1{
+    opacity:0.9;
+}
+.center{
+    margin:auto;
+}

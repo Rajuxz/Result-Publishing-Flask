@@ -1,0 +1,37 @@
+{% extends 'includes/base.html' %}
+{%block navigation%}
+    {% include 'layouts/navbar.html' %}
+{%endblock%}
+    
+    
+{%block content%}    
+       <section id="reviews">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 ">
+                      <div class="large-text text-center mt-5">
+                       <span> What Peoples Says?</span>
+                       <hr class="mt-0 mb-4 w-50 center o-1">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row mt-2">
+                    <div class="col-md-6 col-lg-6 col-sm-12">
+                       <span class="bold"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, adipisci magnam sequi assumenda quibusdam voluptatem? Delectus pariatur maiores officiis dolores harum, impedit quia doloremque eligendi placeat! Tempora culpa iste alias, sed ratione vel delectus tempore incidunt nam soluta ipsa, similique cum itaque? Non reiciendis quos quo optio quas iure cupiditate.
+                       <span class="bold"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, adipisci magnam sequi assumenda quibusdam voluptatem? Delectus pariatur maiores officiis dolores harum, impedit quia doloremque eligendi placeat! Tempora culpa iste alias, sed ratione vel delectus tempore incidunt nam soluta ipsa, similique cum itaque? Non reiciendis quos quo optio quas iure cupiditate.</span>
+
+                       <span class=" d-block mx-5 bold">
+                        - Raju
+                       </span>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <img class="img-fluid" src="{{url_for('static',filename='images/hero.jpg')}}" alt="">
+                     </div>
+                  </div>
+            </div>
+       </section>
+{%endblock%}
+
+{%block footer%}
+{% include 'layouts/footer.html'%}
+{%endblock%}
