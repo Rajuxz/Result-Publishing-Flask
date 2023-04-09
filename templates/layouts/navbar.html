@@ -60,33 +60,3 @@
     </div>
   </div>
 
-  {%block script%}
-    <script>
-      $(document).ready(function(){
-        $('form').on('submit',function(event){
-          $.ajax({
-            data:{
-              email:$('#email_add').val(),
-              password: $('#password').val()
-            },
-            type: 'POST',
-            url: '/sign_in'
-          })
-          .done(function(data){
-            if(data.error){
-              $('#failure_alert').css('display','block').text(data.error).show();
-              $('#success_alert').hide()
-
-                //$('p').show()
-            }else{
-              $('#success_alert').css('display','block').text(data.email).show();
-              $('#failure_alert').hide()
-
-              //$('p').hide()
-            }
-          });
-          event.preventDefault();
-        });
-      });
-    </script>
-  {%endblock%}
