@@ -2,6 +2,7 @@
     --primary-background:#48bbd8;
     --secondary-background:#ffd670;
     --hover-color:#4ab2c0;
+    --hover-color-white:#f2f7f8;
     --text-color:#242424;
     --nav-font-weight:600;
     --transition:.5s all ease-in-out;
@@ -36,7 +37,10 @@ body{
 .nav-link:hover{
     color: var(--hover-color) !important;
 }
-
+.nav-link-custom:hover{
+    color: var(--hover-color-white) !important;
+    opacity: 0.6;
+}
 /* for hero. */
 .custom-margin{
     margin-top:8rem !important;
@@ -47,11 +51,7 @@ body{
     letter-spacing: 1px;
     margin:5px;
 }
-/* hr{
-    width:50%;
-    opacity: 1 !important;
-    margin:1rem auto !important;
-} */
+
 .large-text{
     font-size:30px;
     font-weight: 900;
@@ -96,4 +96,9 @@ body{
 }
 .center{
     margin:auto;
+}
+#sidebar{
+    height: 100vh !important;
+    overflow: hidden; 
+    background-color:var(--primary-background) !important;
 }
