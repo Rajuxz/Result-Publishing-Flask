@@ -101,4 +101,10 @@ body{
     height: 100vh !important;
     overflow: hidden; 
     background-color:var(--primary-background) !important;
+    /* margin-left:0 !important; */
+    position: fixed !important;
+    left: 0px !important;
+}
+.header{
+    margin-left:0px;
 }
