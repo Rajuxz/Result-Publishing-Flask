@@ -23,6 +23,10 @@ class Routing:
     def admin():
         return render_template('admin/dashboard.html')
 
+    @app.route('/students')
+    def students():
+        return render_template('admin/students.html')
+
   
 @app.route('/sign_in',methods=['POST'])
 def sign_in():
