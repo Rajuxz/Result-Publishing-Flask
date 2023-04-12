@@ -21,4 +21,8 @@ $(document).ready(function(){
       });
       event.preventDefault();
     });
+    $('#add_student').on('click',function(event){
+      console.log("Button clicked !");
+      ``
+    });
   });
