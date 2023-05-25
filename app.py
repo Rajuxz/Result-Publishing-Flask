@@ -1,6 +1,14 @@
 from flask import Flask,render_template,jsonify,request
+from flask_sqlalchemy import SQLAlchemy
 
+# Creating an extension
+db = SQLAlchemy()
 app = Flask(__name__)
+app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///project.db"
+db.init_app(app)
+
+
+
 
 class Routing:
     @app.route('/')
@@ -28,6 +36,8 @@ class Routing:
         return render_template('admin/students.html')
 
   
+
+
 @app.route('/sign_in',methods=['POST'])
 def sign_in():
 
@@ -42,6 +52,20 @@ def sign_in():
         return jsonify({'email':newEmail})
     
     return jsonify({'error':'Something went wrong.'})
+
+
+# Database class
+class Class(db.Model):
+    id = db.Column(db.Integer,primary_key = True)
+
+
+
+class Student(db.Model):
+    roll = db.Column(db.Integer,primary_key = True)
+    
+
+class Teacher(db.Model):
+    id = db.Column(db.Integer,primary_key = True)
 
 
 if __name__ == '__main__':
