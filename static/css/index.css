@@ -38,7 +38,7 @@ body{
     color: var(--hover-color) !important;
 }
 .nav-link-custom:hover{
-    color: var(--hover-color-white) !important;
+    color: var(--text-color) !important;
     opacity: 0.6;
 }
 /* for hero. */
