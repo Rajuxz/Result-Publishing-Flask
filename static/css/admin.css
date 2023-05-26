@@ -13,5 +13,14 @@
     background: #7386D5;
     color: #fff;
     transition: all 0.3s;
-    border: 1px solid red;
+}
+
+.custom-link{
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 600;
+    transition: 0.5s all ease-in-out;
+}
+.custom-link:hover{
+    color:#c2bcbcf6 !important;
 }
