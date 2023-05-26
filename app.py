@@ -32,9 +32,9 @@ class Routing:
     def admin():
         return render_template('admin/dashboard.html')
 
-    # @app.route('/students')
-    # def students():
-    #     return render_template('admin/students.html')
+    @app.route('/students')
+    def students():
+        return render_template('admin/components/student.html')
 
   
 
@@ -66,6 +66,8 @@ class Student(db.Model):
     std_class = db.Column(db.Integer, db.ForeignKey(Class.id),nullable = False)
     std_name = db.Column(db.String(20),nullable = False)
     std_phone = db.Column(db.String(15),unique=True,nullable = False)
+    std_email = db.Column(db.String(50),unique=True,nullable = False)
+    std_psw = db.Column(db.String(15),unique=True,nullable = False)
 
 
 class Admin(db.Model):
