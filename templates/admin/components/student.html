@@ -22,20 +22,29 @@
                 aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
-                        <form action="" method="POST">
-                        <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="exampleModalLabel">Add Student</h1>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
+                        <!-- Modal Form -->
+                        <form id="addStudentForm" method="POST">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Add Student</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                
+                                <div class="alerts">
+                                    <div id="success-alert" class="alert alert-success" role="alert"
+                                    style="display:none;"></div>
+                                    <div id="failure-alert" class="alert alert-danger" role="alert"
+                                    style="display:none;"></div>
+                                </div>
 
                                 <div class="form-floating mb-3">
                                     <input type="text" class="form-control" id="fullname" placeholder="John Doe">
-                                    <label for="floatingInput">Full Name</label>
+                                    <label for="fullname">Full Name</label>
                                 </div>
                                 <div class="form-floating mb-3">
-                                    <input type="tel" class="form-control" id="number" placeholder="9876543210">
-                                    <label for="floatingInput">Phone</label>
+                                    <input type="text" class="form-control" id="number" placeholder="9876543210">
+                                    <label for="number">Phone</label>
                                 </div>
                                 <div class="form-floating mb-3">
 
@@ -46,24 +55,23 @@
                                         <option value="3">Three</option>
                                     </select>
                                 </div>
-
+                                
                                 <div class="form-floating mb-3">
-                                    <input type="email" class="form-control" id="email"
-                                        placeholder="name@example.com">
-                                    <label for="floatingInput">Email address</label>
+                                    <input type="email" class="form-control" id="email" placeholder="name@example.com">
+                                    <label for="email">Email address</label>
                                 </div>
                                 <div class="form-floating">
-                                    <input type="password" class="form-control" id="password"
-                                        placeholder="Password">
-                                    <label for="floatingPassword">Password</label>
+                                    <input type="password" class="form-control" id="password" placeholder="Password">
+                                    <label for="password">Password</label>
                                 </div>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
-                                <button type="button" class="btn btn-primary" id="addStudent">Add</button>
+                                <button type="" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
+                                <button type="submit" class="btn btn-primary" id="addStudent">Add</button>
                             </div>
                         </div>
                     </form>
+                    <!-- Modal form ends here -->
                 </div>
             </div>
             <!-- Modal for adding student ends -->
