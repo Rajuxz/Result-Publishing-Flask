@@ -37,7 +37,11 @@ class Routing:
         return render_template('admin/components/student.html')
 
   
+# to add data to database
 
+@app.route('/addstudent',methods=['POST'])
+def addstudent():
+    pass
 
 @app.route('/sign_in',methods=['POST'])
 def sign_in():
