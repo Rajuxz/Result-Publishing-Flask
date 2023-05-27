@@ -1,7 +1,10 @@
 $(document).ready(function(){
-    $('#addStudent').on('click',function(event){
-        event.preventDefault();
-        // console.log($('#password').val());
+
+    /**
+     * Sometimes, working with $('#something').on('eventname',function(e){}) sends multiple Post request
+     * to endpoint. Adding unbind().bind('',function(){}) worked well. :) 
+     */
+    $('#addStudentForm').unbind().bind('submit',function(event){
         $.ajax({
             data:{
                 name:$('#fullname').val(),
@@ -10,15 +13,18 @@ $(document).ready(function(){
                 password:$('#password').val()
             },
             type:'POST',
-            url:'addstudent/'
+            url:'/addstudent'
         })
         .done(function(data){
             if(data.error){
-                // If case
+                $('#failure-alert').text("Error").show();
+                $('#success-alert').hide();
             }else{
-                // Else case
+                $('#success-alert').text("Success").show();
+                $('#failure-alert').hide()
             }
-
+            
         });
+        event.preventDefault();
     });
 });
