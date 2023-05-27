@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $('form').on('submit',function(event){
+    $('#signInForm').on('submit',function(event){
       $.ajax({
         data:{
           email:$('#email_add').val(),
