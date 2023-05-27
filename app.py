@@ -8,40 +8,34 @@ app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///project.db"
 app.app_context().push()
 db.init_app(app)
 
+# App Routing
 
+@app.route('/')
+def index():
+    return render_template('index.html')
 
+@app.route('/staffs')
+def staffs():
+    return render_template('staffs/root.html')
 
-class Routing:
-    @app.route('/')
-    def index():
-        return render_template('index.html')
+@app.route('/about')
+def about():
+    return render_template('about/root.html')
 
-    @app.route('/staffs')
-    def staffs():
-        return render_template('staffs/root.html')
+@app.route('/reviews')
+def reviews():
+    return render_template('reviews/root.html')
 
-    @app.route('/about')
-    def about():
-        return render_template('about/root.html')
-    
-    @app.route('/reviews')
-    def reviews():
-        return render_template('reviews/root.html')
+@app.route('/admin')
+def admin():
+    return render_template('admin/dashboard.html')
 
-    @app.route('/admin')
-    def admin():
-        return render_template('admin/dashboard.html')
-
-    @app.route('/students')
-    def students():
-        return render_template('admin/components/student.html')
+@app.route('/students')
+def students():
+    return render_template('admin/components/student.html')
 
   
-# to add data to database
-
-@app.route('/addstudent',methods=['POST'])
-def addstudent():
-    pass
+# Student Sign in Endpoint
 
 @app.route('/sign_in',methods=['POST'])
 def sign_in():
@@ -57,6 +51,22 @@ def sign_in():
         return jsonify({'email':newEmail})
     
     return jsonify({'error':'Something went wrong.'})
+
+
+# Endpoint to handle add student request from admin section.
+@app.route('/addstudent',methods=['POST'])
+def addstudent():
+    full_name = request.form['name']
+    number = request.form['number']
+    email = request.form['email']
+    password = request.form['password']
+
+    print(full_name)
+    print(number)
+    print(email)
+    print(password)
+
+    return jsonify({'hi':'test'})
 
 
 # Database class
